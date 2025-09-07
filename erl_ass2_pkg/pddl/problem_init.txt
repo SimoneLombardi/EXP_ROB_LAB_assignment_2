@@ -1,0 +1,38 @@
+get domain
+
+
+set instance rob robot
+set instance start location
+set instance wp1 location
+set instance wp2 location
+set instance wp3 location
+set instance wp4 location
+
+set instance m1 marker
+set instance m2 marker
+set instance m3 marker
+set instance m4 marker
+set instance fakem marker
+
+
+set predicate (loc rob start)
+set predicate (searched start rob)
+set predicate (found fakem rob start)
+
+set predicate (connected start wp1)
+set predicate (connected wp1 start)
+set predicate (connected wp1 wp2)
+set predicate (connected wp2 wp1)
+set predicate (connected wp2 wp3)
+set predicate (connected wp3 wp2)
+set predicate (connected wp3 wp4)
+set predicate (connected wp4 wp3)
+
+set predicate (has_loc m1 wp1)
+set predicate (has_loc m2 wp2)
+set predicate (has_loc m3 wp3)
+set predicate (has_loc m4 wp4)
+set predicate (has_loc fakem start)
+
+set goal (and(mission rob wp1 wp2 wp3 wp4 m1 m2 m3 m4))
+
