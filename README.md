@@ -77,4 +77,5 @@ goal to the `/navigate_to_pose` action server. Reaching the lowest id marker in 
 
 ## Problems encountered ##
 The problems I encoutered were primarely rooted in the computational cost of the aruco node search, I had to lower the resolution and refresh rate of the camera and laser to be able to effectively run the simulation (the sensor parameters can be found in the robot_urdf package, under robot5.gazebo file).
+For that reason I had to change sligltly the position of the waypoint 3, because the normal position combined with the lower resolution did not allow the marker to be recognised most of the times.
 And lastly the `End mission node`, was not correctly recognized from the planning server. But nontheless it works correctly. This creates a error message for the planner, that thinks that the plan failed where instead the robot is behaving correctly.
