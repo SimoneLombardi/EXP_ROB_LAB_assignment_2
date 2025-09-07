@@ -64,8 +64,8 @@ Once the plan is generated type "run" on this terminal
 
 ## Action node description
 ### Move Node ###
-This node is responsible for moveing the robot in the environment, it is subscribed to the `/odom` topic and it has a client for the `/navigate_to_pose` action server.
-After reciveing the name of the way point, the node sends the corresponding goal to the action server.
+This node is responsible for moveing the robot in the environment, it is subscribed to the `/odom` topic and it has a 
+client for the `/navigate_to_pose` action server.After reciveing the name of the way point, the node sends the corresponding goal to the action server.
 
 ### Search Node ###
 This node is used to detect the marker in the environment, it is subscribed to the `/aruco_marker` topic. When the robot is in the correct spot this node starts publishing on the  `/cmd_vel` topic, to spin the robot at a constant 
